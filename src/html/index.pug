@@ -15,9 +15,9 @@ html
     meta(property='og:title', content='Sharing Meta Title')
     meta(property='og:description', content='Replace me with a description')
     meta(property='og:image', content='#')
-    if ENV === 'prod'
-      link(rel='stylesheet', href='main.css', media='screen')
+    link(href="https://fonts.googleapis.com/css?family=Roboto:200,300,500" rel="stylesheet")
+    link(rel='stylesheet', href='main.css', media='screen')
   body
-    h1 Website Title
-
-    include ./content.pug
+    img.logo.logo--mhr(src='images/mhr.png')
+    .mhr-cards-container
+      include ./content.pug

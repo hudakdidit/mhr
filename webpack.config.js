@@ -29,7 +29,7 @@ module.exports = {
         {
           key: 'styl',
           test:   /\.styl$/,
-          loader: "style!css!stylus"
+          loader: ExtractTextPlugin.extract("style-loader", "css-loader!stylus-loader")
         }
       ]
   },

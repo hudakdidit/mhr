@@ -1,0 +1,86 @@
+.mhr-cards-container
+  +above(tablet)
+    display flex
+    flex-wrap wrap
+    padding 0 10px
+
+.mhr-card
+  padding 10px 10px 0 10px
+  flex-basis (100 / 3)%
+
+  +above(tablet)
+    padding 10px
+
+  &:last-of-type
+    margin-bottom 10px
+
+    +above(tablet)
+      margin-bottom 0
+
+.mhr-card .mhr-card__content
+  background-size cover
+  background-position center
+  background-repeat no-repeat
+
+.mhr-card--tilth .mhr-card__content
+  background-image url(/images/tilth-background.jpg)
+
+.mhr-card--gb .mhr-card__content
+  background-image url(/images/gb-background.jpg)
+
+.mhr-card--agrodolce .mhr-card__content
+  background-image url(/images/agro-background.jpg)
+
+.mhr-card--catering .mhr-card__content
+  background-image url(/images/catering.jpg)
+
+.mhr-card__content
+  background white
+  padding 20px
+  overflow hidden
+  height 300px
+  color white
+  position relative
+
+  &::after
+    content ""
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+    background rgba(black, 0)
+    transition 1s background ease-out-quart
+    z-index 1
+
+  &:hover::after
+    background rgba(black, .15)
+
+  & *
+    position relative
+    z-index 3
+
+  a
+    color white
+    text-decoration none
+
+  h2
+    margin-bottom 2rem
+    font-weight 300
+    font-size 2rem
+
+  h3
+    margin-bottom 1rem
+    font-weight 200
+
+  .address,
+  .telephone
+    line-height 1.5
+    font-weight 200
+
+  .logo,
+  .button
+    float right
+
+  .logo
+    max-width 100px
